@@ -1,11 +1,12 @@
-# sql_code_highlighting
+# jupyterlabs_sql_codemirror
 
-[![Github Actions Status](https://github.com/github_username/sql_code_highlighting/workflows/Build/badge.svg)](https://github.com/github_username/sql_code_highlighting/actions/workflows/build.yml)
-For highlighting with %sql and %%sql magic commands.
+[![Github Actions Status](/workflows/Build/badge.svg)](/actions/workflows/build.yml)
+
+A JupyterLab extension.
 
 ## Requirements
 
-- JupyterLab >= 3.1
+- JupyterLab >= 4.0.0
 
 ## Install
 
@@ -36,11 +37,18 @@ The `jlpm` command is JupyterLab's pinned version of
 ```bash
 # Clone the repo to your local environment
 # Change directory to the jupyterlabs_sql_codemirror directory
-# Install package in development mode
-pip install -e .
+
+# Set up a virtual environment and install package in development mode
+python -m venv .venv
+source .venv/bin/activate
+pip install --editable "."
+
 # Link your development version of the extension with JupyterLab
 jupyter labextension develop . --overwrite
+
 # Rebuild extension Typescript source after making changes
+# IMPORTANT: Unlike the steps above which are performed only once, do this step
+# every time you make a change.
 jlpm build
 ```
 
@@ -69,7 +77,7 @@ pip uninstall jupyterlabs_sql_codemirror
 
 In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
 command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
-folder is located. Then you can remove the symlink named `jupyterlabs_sql_codemirror` within that folder.
+folder is located. Then you can remove the symlink named `jupyterlabs-sql-codemirror` within that folder.
 
 ### Packaging the extension
 
