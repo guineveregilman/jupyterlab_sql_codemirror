@@ -1,7 +1,7 @@
 {
     "name": "jupyterlabs-sql-codemirror",
     "version": "0.2.0",
-    "description": "A JupyterLab extension.",
+    "description": "A JupyterLab extension for syntax highlighting with sql magic commands.",
     "keywords": [
         "jupyter",
         "jupyterlab",

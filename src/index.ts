@@ -21,7 +21,7 @@ const languageConf = new Compartment();
 const autoLanguage = EditorState.transactionExtender.of(tr => {
   const isSql = /^\s*%{1,2}sql/.test(tr.newDoc.sliceString(0, 100));
   return {
-    effects: languageConf.reconfigure(isSql ? sql() : python())
+    effects: languageConf.reconfigure(isSql ? sql() : [])
   };
 });
 
