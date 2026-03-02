@@ -1,16 +1,13 @@
 {
     "name": "jupyterlabs-sql-codemirror",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "description": "A JupyterLab extension for syntax highlighting with sql magic commands.",
     "keywords": [
         "jupyter",
         "jupyterlab",
         "jupyterlab-extension"
     ],
-    "homepage": "",
-    "bugs": {
-        "url": "/issues"
-    },
+    "homepage": "https://github.com/ComposableAnalytics/jupyterlabs_sql_codemirror",
     "license": "BSD-3-Clause",
     "author": {
         "name": "Composable Analytics",
@@ -26,7 +23,7 @@
     "style": "style/index.css",
     "repository": {
         "type": "git",
-        "url": ".git"
+        "url": "https://github.com/ComposableAnalytics/jupyterlabs_sql_codemirror"
     },
     "scripts": {
         "build": "jlpm build:lib && jlpm build:labextension:dev",
